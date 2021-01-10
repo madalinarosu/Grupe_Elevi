@@ -11,7 +11,7 @@ using Grupe_Elevi.Models;
 
 namespace Grupe_Elevi.Pages.Elevi
 {
-    public class EditModel : PageModel
+    public class EditModel : ElevClasePageModels
     {
         private readonly Grupe_Elevi.Data.Grupe_EleviContext _context;
 
@@ -75,19 +75,10 @@ selectedClase)
                 return RedirectToPage("./Index");
             }
 
-                UpdateElevClase(_context, selectedClase, elevToUpdate);
-                PopulateAssignedClasaData(_context, elevToUpdate);
-                return Page();
-            
-        }
-        private void UpdateElevClase(Grupe_EleviContext context, string[] selectedClase, Elev elevToUpdate)
-        {
-            throw new NotImplementedException();
-        }
+            UpdateElevClase(_context, selectedClase, elevToUpdate);
+            PopulateAssignedClasaData(_context, elevToUpdate);
+            return Page();
 
-        private void PopulateAssignedClasaData(Grupe_EleviContext context, Elev elevToUpdate)
-        {
-            throw new NotImplementedException();
         }
     }
 }
